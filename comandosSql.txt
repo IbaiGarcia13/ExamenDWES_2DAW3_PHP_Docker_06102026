@@ -1,1 +1,18 @@
-// Copia aquí todos los comandos que has usado para crear la base de datos.
+CREATE DATABASE IF NOT EXISTS CAE
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+USE CAE;
+
+CREATE TABLE IF NOT EXISTS SOLICITUD (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    dni VARCHAR(9) NOT NULL,
+    f_nac DATE NOT NULL,
+    tlf VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    profesion VARCHAR(50) NOT NULL,
+    jornadaParcial BOOLEAN NOT NULL,
+    idiomas VARCHAR(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
